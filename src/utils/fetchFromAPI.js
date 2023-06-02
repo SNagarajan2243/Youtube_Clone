@@ -23,6 +23,6 @@ const options = {
 	}
 }
 export const fetchFromAPI = async(url) => {
-	const response = await fetch(url, options)
+	const response = await fetch(`${BASE_URL}${url}&maxResults=50`, options)
 	return await response.json()
 }
