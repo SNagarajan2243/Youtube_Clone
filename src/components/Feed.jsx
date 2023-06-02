@@ -7,20 +7,21 @@ const Feed = () => {
     const [selectedCategory,setSelectedCategory] = useState('New')
     const [videos,setVideos] = useState([])
     useEffect(()=>{
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '1f14b80557msh53754ea925c7496p1e9f6bjsn443eb8e3cf60',
-                'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
-            }
-        };
+        // const options = {
+        //     method: 'GET',
+        //     headers: {
+        //         'X-RapidAPI-Key': '1f14b80557msh53754ea925c7496p1e9f6bjsn443eb8e3cf60',
+        //         'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+        //     }
+        // };
         const url = 'https://youtube-v31.p.rapidapi.com/search?q=music&part=snippet&maxResults=50'
-        const fetchResult = async() => {
-            const response = await fetch(url, options);
-            const result = await response.json();
-            setVideos(result.items)
-        } 
-        fetchResult();
+        // const fetchResult = async() => {
+        //     const response = await fetch(url, options);
+        //     const result = await response.json();
+        //     setVideos(result.items)
+        // } 
+        // fetchResult();
+        fetchFromAPI(url).then(res => setVideos(res.items))
     },[selectedCategory])
 
   return (
