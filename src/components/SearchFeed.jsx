@@ -9,7 +9,7 @@ const SearchFeed = () => {
     useEffect(()=>{
         const url = `search?q=${searchTerm}&part=snippet`
         fetchFromAPI(url).then(res => setVideos(res.items))
-    },[])
+    },[searchTerm])
 
   return (
     <Stack>
@@ -18,7 +18,7 @@ const SearchFeed = () => {
                   Search Result for : {searchTerm}
                   <span style={{color: '#F31503'}}> Search Term</span>
               </Typography>
-              <Videos videos={videos}/>
+              <Videos videos={videos} justifycontent="center"/>
       </Box>
     </Stack>
   )
