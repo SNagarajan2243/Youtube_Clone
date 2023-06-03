@@ -8,6 +8,7 @@ const Navbar = () => {
   return (
     <Stack
       direction="row"
+      flexDirection={{ xs: "column", md: "row" }}
       alignItems="center"
       p={2}
       sx={{
@@ -15,6 +16,7 @@ const Navbar = () => {
         background: "#000",
         top: 0,
         justifyContent: "space-between", 
+        gap: "10px",
       }}
     >
       <Link to="/" style={{display: "flex",alignItems: "center"}}>
