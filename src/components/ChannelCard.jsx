@@ -5,7 +5,7 @@ import{Link} from 'react-router-dom'
 import { demoProfilePicture } from '../utils/constants'
 
 const ChannelCard = ({channelDetail,marginTop,Width}) => {
-  const width = !!Width ? Width :  {xs: '356px',md: '320px'}
+  const width = !!Width ? Width :  {xs: '350px',md: '310px'}
   console.log(Width)
   return (
     <Box sx={{boxShadow: 'none',borderRadius:'20px',display:'flex',justifyContent: 'center',alignItems: 'center',width,height: '326px',marginTop}}>

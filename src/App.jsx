@@ -20,12 +20,10 @@ const App = () => {
   ])
 
   return (
-    <React.Fragment>
       <Box sx={{backgroundColor: '#000'}}>
         <Navbar />
         <RouterProvider router={router} />
       </Box>
-    </React.Fragment>
   )
 }
 

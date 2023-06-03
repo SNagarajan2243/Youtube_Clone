@@ -18,7 +18,7 @@ const Navbar = () => {
       }}
     >
       {/* <Link to="/" style={{display: "flex",alignItems: "center"}}> */}
-        <img src={logo} alt="logo" height={45} />
+        <img src={logo} alt="logo" height={45} onClick={()=>window.location.href="/"}/>
       {/* </Link> */}
       <SearchBar />
     </Stack>
