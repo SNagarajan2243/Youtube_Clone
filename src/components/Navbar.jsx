@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack } from "@mui/material";
+import { Stack ,Typography} from "@mui/material";
 import { Link } from "react-router-dom";
 import { logo } from "../utils/constants";
 import SearchBar from "./SearchBar";
@@ -18,7 +18,10 @@ const Navbar = () => {
       }}
     >
       <Link to="/" style={{display: "flex",alignItems: "center"}}>
-        <img src={logo} alt="logo" height={45} />
+        <img src={logo} alt="logo" height={45} /> 
+        <Typography color="white" variant="h4" fontWeight="bold">
+          HeroTube
+        </Typography>
       </Link>
       <SearchBar />
     </Stack>
